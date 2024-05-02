@@ -3,169 +3,175 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-@font-face {
-  font-family: 'ArsenicaTrial-Extrabold';
-  src: url('fonts/ArsenicaTrial-Extrabold.ttf') format('truetype');
-}
-* {
-  box-sizing: border-box;
-}
+  <style>
+    @font-face {
+      font-family: 'ArsenicaTrial-Extrabold';
+      src: url('fonts/ArsenicaTrial-Extrabold.ttf') format('truetype');
+    }
 
-body {
-  background-image: url('background.png'); /* Replace 'background.png' with the path to your background image */
-  background-size: cover;
-  background-position: center;
-}
-h2{
-font-family: 'ArsenicaTrial-Extrabold', sans-serif;
-color: white;
-text-align: center;
-font-size: 5vw;
-margin-top: 5%;
-}
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
+    body {
+      background-image: url('background.png'); /* Replace 'background.png' with the path to your background image */
+      background-size: cover;
+      background-position: center;
+    }
 
-input[type=submit] {
-  background-color: #004b8d;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+    h2 {
+      font-family: 'ArsenicaTrial-Extrabold', sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 25vw; /* Adjust as needed */
+      margin-top: 5%;
+    }
 
-input[type=submit]:hover {
-  background-color: #000080;
-}
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
 
-.container {
-   
-  padding-top: 50px; /* Adjust as needed */
-  padding-bottom: 50px; /* Adjust as needed */
-  border-radius: 5px;
-  background-color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto; 
-}
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
 
-.col-25 {
-  text-align: left;
-float: left;
-padding-left: 5px;
-  width: 25%;
-  margin-top: 6px;
- font-family: "Times New Roman", Times, serif;
-}
+    input[type=submit] {
+      background-color: #004b8d;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
+    input[type=submit]:hover {
+      background-color: #000080;
+    }
 
-/* Clear floats after the columns */
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    .container {
+      padding-top: 50px; /* Adjust as needed */
+      padding-bottom: 50px; /* Adjust as needed */
+      border-radius: 5px;
+      background-color: white;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin: 0 auto;
+    }
 
-/* Center the submit button */
-.row {
-  text-align: center;
-}
+    .col-25 {
+      text-align: left;
+      float: left;
+      padding-left: 5px;
+      width: 25%;
+      margin-top: 6px;
+      font-family: "Times New Roman", Times, serif;
+    }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-   
- 
-}
-</style>
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+    /* Clear floats after the columns */
+    .row::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Center the submit button */
+    .row {
+      text-align: center;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .col-25,
+      .col-75,
+      input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<h2>Take the next step! Fill in your information now.</h2>
- 
-<div class="container">
-  <form id="myForm" action="https://formspree.io/f/xwkgyqjn" method="POST">
-  <div class="row">
-    <div class="col-25">
-      <label for="fname">First Name</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="fname" name="firstname" >
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="lname">Last Name</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="lname" name="lastname" >
-    </div>
-  </div>
-   <div class="row">
-    <div class="col-25">
-      <label for="Gid">GUtech ID</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="Gid" name="Gid" placeholder="12-3456 ">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="phonenum">Phone number</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="phonenum" name="phonenum" placeholder="+968">
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <input type="submit" value="Submit">
-  </div>
-  </form>
-</div>
+  <h2>Take the next step! Fill in your information now.</h2>
 
-<script>
-document.getElementById('myForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent default form submission
-  
-  // Get the form data
-  var formData = new FormData(this);
-  
-  // Submit the form data to Formspree
-  fetch('https://formspree.io/f/xwkgyqjn', {
-    method: 'POST',
-    body: formData,
-    headers: {
-      'Accept': 'application/json'
-    }
-  })
-  .then(response => {
-    // Redirect to another page on successful form submission
-    window.location.href = 'page.html';
-  })
-  .catch(error => console.error('Error:', error));
-});
-</script>
+  <div class="container">
+    <form id="myForm" action="https://formspree.io/f/xwkgyqjn" method="POST">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="Gid">GUtech ID</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="Gid" name="Gid" placeholder="12-3456 ">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="phonenum">Phone number</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="phonenum" name="phonenum" placeholder="+968">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Get the form data
+      var formData = new FormData(this);
+
+      // Submit the form data to Formspree
+      fetch('https://formspree.io/f/xwkgyqjn', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => {
+          // Redirect to another page on successful form submission
+          window.location.href = 'page.html';
+        })
+        .catch(error => console.error('Error:', error));
+    });
+  </script>
 
 </body>
+
 </html>
