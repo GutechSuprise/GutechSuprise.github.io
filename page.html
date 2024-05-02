@@ -9,7 +9,23 @@
     * {
       box-sizing: border-box;
     }
+    .image-container {
+  display: inline-block;
+  vertical-align: top;
+  height: 30px; /* Adjust height as needed */
+}
 
+.text-container {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 5px; /* Adjust padding as needed */
+}
+
+.text-container p {
+  margin: 0; /* Remove default paragraph margin */
+  height: 30px; /* Match the height of the image */
+  line-height: 30px; /* Center the text vertically */
+}
     body {
       background-image: url('background.png');
       /* Replace 'background.png' with the path to your background image */
@@ -81,14 +97,25 @@
       <h2>You've been cyber attacked!/n Visit our booth to become cyber aware and avoid it next time</h2>
     </div>
     <div class="row">
-      <div class="col"><img src="map.png" alt="Map Icon" style="width:20px;height:20px;"></div>
-      <div class="col"><p>Ground floor, Booth number one.</p></div>
+  <div class="col">
+    <div class="image-container">
+      <img src="map.png" alt="Map Icon" style="width:20px;height:20px;">
     </div>
-    <div class="row">
-      <div class="col"><img src="calendar.jpg" alt="Location Icon" style="width:30px;height:30px;"></div>
-      <div class="col"><p>19th of May 2024</p></div>
+    <div class="text-container">
+      <p>Ground floor, Booth number one.</p>
     </div>
   </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="image-container">
+      <img src="calendar.jpg" alt="Location Icon" style="width:30px;height:30px;">
+    </div>
+    <div class="text-container">
+      <p>19th of May 2024</p>
+    </div>
+  </div>
+</div>
 
 </body>
 
