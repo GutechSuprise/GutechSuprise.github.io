@@ -17,14 +17,19 @@
 .image-container2 {
   display: inline-block;
   vertical-align: top;
-  height: 20px; /* Adjust height as needed */
+  height: 15px; /* Adjust height as needed */
 }
 .text-container {
   display: inline-block;
   vertical-align: top;
   padding-left: 5px; /* Adjust padding as needed */
+  flex-grow: 1; /* Allow the text container to grow to fill remaining space */
+  text-align: left; /* Align text to the left */
 }
-
+.image-container1,
+.image-container2 {
+  margin-right: 10px; /* Adjust spacing between image and text */
+}
 .text-container p {
   margin: 0; /* Remove default paragraph margin */
   height: 30px; /* Match the height of the image */
@@ -58,6 +63,8 @@
 
     .col {
       text-align: center;
+  display: flex; /* Add display flex */
+  align-items: center; /* Center vertically */
       float: left;
       padding-left: 5px;
       margin-top: 6px;
