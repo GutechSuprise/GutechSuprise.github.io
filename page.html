@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+
 <head>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <style>
@@ -9,33 +12,39 @@
     * {
       box-sizing: border-box;
     }
+
     .image-container1 {
-  display: inline-block;
-  vertical-align: top;
-  height: 30px; /* Adjust height as needed */
-}
-.image-container2 {
-  display: inline-block;
-  vertical-align: top;
-  height: 15px; /* Adjust height as needed */
-}
-.text-container {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 5px; /* Adjust padding as needed */
-  flex-grow: 1; /* Allow the text container to grow to fill remaining space */
-  text-align: left; /* Align text to the left */
-}
-.image-container1,
-.image-container2 {
-  margin-right: 10px; /* Adjust spacing between image and text */
-}
-.text-container p {
-  margin: 0; /* Remove default paragraph margin */
-  height: 30px; /* Match the height of the image */
-  line-height: 30px; /* Center the text vertically */
-  font-weight: bold;
-}
+      display: inline-block;
+      vertical-align: top;
+      height: 30px; /* Adjust height as needed */
+    }
+
+    .image-container2 {
+      display: inline-block;
+      vertical-align: top;
+      height: 15px; /* Adjust height as needed */
+    }
+
+    .text-container {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 5px; /* Adjust padding as needed */
+      flex-grow: 1; /* Allow the text container to grow to fill remaining space */
+      text-align: left; /* Align text to the left */
+    }
+
+    .image-container1,
+    .image-container2 {
+      margin-right: 10px; /* Adjust spacing between image and text */
+    }
+
+    .text-container p {
+      margin: 0; /* Remove default paragraph margin */
+      height: 30px; /* Match the height of the image */
+      line-height: 30px; /* Center the text vertically */
+      font-weight: bold;
+    }
+
     body {
       background-image: url('background.png');
       /* Replace 'background.png' with the path to your background image */
@@ -59,23 +68,18 @@
       background-color: white;
       padding-left: 20px;
       padding-right: 20px;
-      margin: 50% auto;
+      margin: auto; /* Center horizontally */
+      width: fit-content; /* Adjust width based on content */
     }
 
     .col {
       text-align: center;
-  display: flex; /* Add display flex */
-  align-items: center; /* Center vertically */
+      display: flex; /* Add display flex */
+      align-items: center; /* Center vertically */
       float: left;
       padding-left: 5px;
       margin-top: 6px;
       font-family: "Times New Roman", Times, serif;
-    }
-
-    .col-75 {
-      float: left;
-      width: 75%;
-      margin-top: 6px;
     }
 
     /* Clear floats after the columns */
@@ -83,12 +87,6 @@
       content: "";
       display: table;
       clear: both;
-    }
-
-    /* Center the submit button */
-    .row {
-      text-align: center;
- 
     }
 
     /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
@@ -107,32 +105,29 @@
 
   <div class="container">
     <div class="row">
-      <h2>You've been cyber attacked!</h2><h2> Visit our booth to become cyber aware and avoid it next time.</h2>
+      <h2>You've been cyber attacked! Visit our booth to become cyber aware and avoid it next time.</h2>
     </div>
-    <div style=" display: block;
-  margin-left: auto;
-  margin-right: auto;">
     <div class="row">
-  <div class="col">
-    <div class="image-container2">
-      <img src="map.png" alt="Map Icon" style="width:20px;height:20px;">
+      <div class="col">
+        <div class="image-container2">
+          <img src="map.png" alt="Map Icon" style="width:20px;height:20px;">
+        </div>
+        <div class="text-container">
+          <p>Ground floor, Booth number one.</p>
+        </div>
+      </div>
     </div>
-    <div class="text-container">
-      <p> Ground floor, Booth number one.</p>
+    <div class="row">
+      <div class="col">
+        <div class="image-container1">
+          <img src="calendar.jpg" alt="Location Icon" style="width:30px;height:30px;">
+        </div>
+        <div class="text-container">
+          <p>19th of May 2024</p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="col">
-    <div class="image-container1">
-      <img src="calendar.jpg" alt="Location Icon" style="width:30px;height:30px;">
-    </div>
-    <div class="text-container">
-      <p>19th of May 2024</p>
-    </div>
-  </div>
-</div>
-</div>
 
 </body>
 
