@@ -18,6 +18,11 @@
       /* Replace 'background.png' with the path to your background image */
       background-size: cover;
       background-position: center;
+      margin: 0; /* Added to remove default body margin */
+      display: flex; /* Added to use flexbox */
+      justify-content: center; /* Added to horizontally center the container */
+      align-items: center; /* Added to vertically center the container */
+      height: 100vh; /* Added to make the body fill the entire viewport */
     }
 
     h2 {
@@ -28,50 +33,33 @@
     }
 
     .container {
-      padding-top: 50px;
-      /* Adjust as needed */
-      padding-bottom: 50px;
-      /* Adjust as needed */
       border-radius: 5px;
       background-color: white;
-      padding-left: 20px;
-      padding-right: 20px;
-      margin: 0 auto;
+      padding: 20px;
+      display: flex; /* Added to use flexbox */
+      flex-direction: column; /* Added to stack elements vertically */
+      gap: 10px; /* Added to add space between rows */
     }
 
-    .col {
-      text-align: center;
-      float: left;
-      padding-left: 5px;
-      margin-top: 6px;
-      font-family: "Times New Roman", Times, serif;
-    }
-
-    .col-75 {
-      float: left;
-      width: 75%;
-      margin-top: 6px;
-    }
-
-    /* Clear floats after the columns */
-    .row::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    /* Center the submit button */
     .row {
-      text-align: center;
+      display: flex; /* Added to use flexbox */
+      align-items: center; /* Added to vertically center elements */
+      height: 50px; /* Added to make all rows the same height */
     }
 
-    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    .col img {
+      width: 20px; /* Adjusted image width */
+      height: 20px; /* Adjusted image height */
+    }
+
+    /* Added media query for smaller screens */
     @media screen and (max-width: 600px) {
-      .col-25,
-      .col-75,
-      input[type=submit] {
-        width: 100%;
-        margin-top: 0;
+      h2 {
+        font-size: 3vw; /* Adjusted font size for smaller screens */
+      }
+      .col img {
+        width: 15px; /* Adjusted image width for smaller screens */
+        height: 15px; /* Adjusted image height for smaller screens */
       }
     }
   </style>
@@ -81,14 +69,14 @@
 
   <div class="container">
     <div class="row">
-      <h2>You've been cyber attacked!/n Visit our booth to become cyber aware and avoid it next time</h2>
+      <h2>You've been cyber attacked! Visit our booth to become cyber aware and avoid it next time</h2>
     </div>
     <div class="row">
-      <div class="col"><img src="map.png" alt="Map Icon" style="width:20px;height:20px;"></div>
+      <div class="col"><img src="map.png" alt="Map Icon"></div>
       <div class="col"><p>Ground floor, Booth number one.</p></div>
     </div>
     <div class="row">
-      <div class="col"><img src="calendar.jpg" alt="Location Icon" style="width:30px;height:30px;"></div>
+      <div class="col"><img src="calendar.jpg" alt="Location Icon"></div>
       <div class="col"><p>19th of May 2024</p></div>
     </div>
   </div>
