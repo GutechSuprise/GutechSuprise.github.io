@@ -104,7 +104,7 @@ padding-left: 5px;
 <h2>Take the next step! Fill in your information now.</h2>
  
 <div class="container">
-  <form action="https://formspree.io/f/xwkgyqjn?redirect=/" method="POST">
+  <form id="myForm" action="https://formspree.io/f/xwkgyqjn" method="POST">
   <div class="row">
     <div class="col-25">
       <label for="fname">First Name</label>
@@ -143,6 +143,29 @@ padding-left: 5px;
   </div>
   </form>
 </div>
+
+<script>
+document.getElementById('myForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+  
+  // Get the form data
+  var formData = new FormData(this);
+  
+  // Submit the form data to Formspree
+  fetch('https://formspree.io/f/xwkgyqjn', {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    // Redirect to another page on successful form submission
+    window.location.href = 'page.html';
+  })
+  .catch(error => console.error('Error:', error));
+});
+</script>
 
 </body>
 </html>
