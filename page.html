@@ -68,7 +68,7 @@
       padding-bottom: 50px;
       /* Adjust as needed */
       border-radius: 5px;
-      background-color: white;
+      background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
       padding-left: 20px;
       padding-right: 20px;
       margin: 50% auto; /* Center horizontally */
@@ -82,7 +82,98 @@
       float: left;
       padding-left: 5px;
       margin-top: 6px;
-      font-family: "Times New Roman", Times, serif;
+      
+To make the white box black and transparent and change the font to Poppins, you can adjust the CSS accordingly. Here's the modified code:
+
+html
+Copy code
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Bright-retro';
+      src: url('bright-font/BrightDemo-axVxE.otf') format('opentype');
+      /* Use the correct format ('opentype') and adjust the path */
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .image-container1 {
+      display: inline-block;
+      vertical-align: top;
+      height: 30px; /* Adjust height as needed */
+    }
+
+    .image-container2 {
+      display: inline-block;
+      vertical-align: top;
+      height: 15px; /* Adjust height as needed */
+    }
+
+    .text-container {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 5px; /* Adjust padding as needed */
+      flex-grow: 1; /* Allow the text container to grow to fill remaining space */
+      text-align: left; /* Align text to the left */
+    }
+
+    .image-container1,
+    .image-container2 {
+      margin-right: 10px; /* Adjust spacing between image and text */
+    }
+
+    .text-container p {
+      margin: 0; /* Remove default paragraph margin */
+      height: 30px; /* Match the height of the image */
+      line-height: 30px; /* Center the text vertically */
+      font-weight: bold;
+      text-align: center;
+      font-family: 'Poppins', sans-serif; /* Use the Poppins font */
+    }
+
+    body {
+      background-image: url('page.jpeg');
+      /* Replace 'background.png' with the path to your background image */
+      background-size: cover;
+      background-position: center;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif; /* Use the Poppins font */
+      text-align: center;
+      font-size: 5vw;
+      margin-top: 5%;
+    }
+
+    .container {
+      padding-top: 50px;
+      /* Adjust as needed */
+      padding-bottom: 50px;
+      /* Adjust as needed */
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+      padding-left: 20px;
+      padding-right: 20px;
+      margin: 50% auto; /* Center horizontally */
+      width: fit-content; /* Adjust width based on content */
+    }
+
+    .col {
+      text-align: center;
+      display: flex; /* Add display flex */
+      align-items: center; /* Center vertically */
+      float: left;
+      padding-left: 5px;
+      margin-top: 6px;
+      font-family: "Poppins", sans-serif; /* Use the Poppins font */
+      color: #FFF7E1;
     }
 
     /* Clear floats after the columns */
