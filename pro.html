@@ -111,46 +111,47 @@
   <h2>Take the next step<br>Fill in your information now! </h2>
 
   <div class="container">
-    <form id="myForm" action="https://formspree.io/f/xwkgyqjn" method="POST">
+  <form id="myForm" action="https://formspree.io/f/xwkgyqjn" method="POST">
 
-      <div class="row">
-        <div class="col-25">
-          <label for="fname">First Name</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="fname" name="firstname" placeholder="your first name">
-        </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="lname">Last Name</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="lname" name="lastname" placeholder="your last name">
-        </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your first name" required>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="Gid">GUtech ID</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="Gid" name="Gid" placeholder="12-3456" attern="[0-9]+" title="Please enter only numbers">
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
       </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="phonenum">Phone number</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="phonenum" name="phonenum" placeholder="+968 9989 9232" pattern="[0-9]+" title="Please enter only numbers">
-        </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name" required>
       </div>
-      <br>
-      <div class="row">
-        <input type="submit" value="Submit">
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Gid">GUtech ID</label>
       </div>
-    </form>
-  </div>
+      <div class="col-75">
+        <input type="text" id="Gid" name="Gid" placeholder="12-3456" pattern="[0-9]+" title="Please enter only numbers" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="phonenum">Phone number</label>
+      </div>
+      <div class="col-75">
+        <input type="tel" id="phonenum" name="phonenum" placeholder="+968 9989 9232" pattern="[0-9]+" title="Please enter only numbers" required>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
 
   <script>
     document.getElementById('myForm').addEventListener('submit', function (event) {
